@@ -1,0 +1,16 @@
+<launch>
+  <node pkg="turtlesim" exec="turtlesim_node" name="turtlesim" output="screen"/>
+
+  <node pkg="turtle_project_pkg" exec="turtle_spawner" name="turtle_spawner" output="screen">
+    <param name="max_turtles" value="5" />
+    <param name="spawn_frequency" value="1.0" />
+    <param name="turtle_name_prefix" value="turtle" />
+  </node>
+
+  <node pkg="turtle_project_pkg" exec="turtle_controller" name="turtle_controller" output="screen">
+    <param name="linear" value="2.0" />
+    <param name="angular" value="10.0" />
+    <param name="catch_distance" value="0.5" />
+    <param name="catch_closest" value="true" />
+  </node>
+</launch>
