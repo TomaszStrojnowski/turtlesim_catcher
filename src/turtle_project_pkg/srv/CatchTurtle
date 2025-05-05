@@ -1,5 +1,0 @@
-# request
-string name
----
-# response
-bool success
